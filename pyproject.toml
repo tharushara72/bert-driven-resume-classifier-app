@@ -1,0 +1,16 @@
+[project]
+name = "resume-classifier"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.135.2",
+    "pandas>=2.3.3",
+    "pymupdf>=1.27.2.2",
+    "python-multipart>=0.0.22",
+    "sentence-transformers>=5.3.0",
+    "streamlit>=1.55.0",
+    "transformers[torch]>=5.3.0",
+    "uvicorn>=0.42.0",
+]

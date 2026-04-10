@@ -19,15 +19,30 @@ This project introduces a paradigm shift from **Lexical Matching** to **Deep Sem
 
 ---
 
-## 🧠 Why This Model? (The AI Architecture)
-I chose **Sentence-BERT (SBERT)**—specifically the `all-MiniLM-L6-v2` transformer—for the following technical reasons:
+## 🧠 The "Brain" of the System: BERT Power
 
-1. **Siamese Network Architecture:** Optimized for comparing two different texts (Job Description vs. Resume) simultaneously.
-2. **High-Dimensional Embeddings:** Maps documents into a **384-dimensional vector space** where distance represents true professional compatibility.
-3. **Inference Speed:** Provides near-instant results, making it viable for real-time industrial screening of thousands of documents.
+Traditional search looks for **words**. Our system looks for **meaning**. 
+
+### 🌟 Why BERT? (The Semantic Revolution)
+Most resume scanners are "dumb"—if you search for **"Java Developer"** and a resume says **"JVM Engineer,"** they might miss it. 
+
+We use **Sentence-BERT (SBERT)**, a modification of the ground-breaking BERT (Bidirectional Encoder Representations from Transformers) model. It allows the system to:
+* **Understand Context:** It reads sentences both left-to-right and right-to-left simultaneously.
+* **Capture Intent:** It recognizes that a "Data Scientist" and a "Machine Learning Engineer" share 90% of the same "Vector Space."
+* **Eliminate Keyword Bias:** Candidates can no longer "cheat" the system by just stuffing hidden keywords; they must have the actual semantic experience.
+
+### ⚡ The Model: `all-MiniLM-L6-v2`
+I specifically chose the **MiniLM** variant for this project. In the business world, speed is just as important as accuracy:
+1. **Speed:** It is optimized to generate embeddings in milliseconds.
+2. **Efficiency:** It provides **99% of the accuracy** of the largest BERT models while being **60% smaller**, making it perfect for real-time applications.
+3. **Accuracy:** It maps every resume into a **384-dimensional map**. The closer two dots are on that map, the better the candidate matches the job!
+
+### 🎯 How it Works (Simple 3-Step Process)
+1. **Embedding:** The Job Description and Resumes are converted into "Math Vectors."
+2. **Comparison:** The system uses **Cosine Similarity** to measure the angle between these vectors.
+3. **Ranking:** The smaller the angle, the higher the match percentage!
 
 ---
-
 
 
 

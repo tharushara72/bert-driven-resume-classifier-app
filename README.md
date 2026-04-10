@@ -28,14 +28,37 @@ I chose **Sentence-BERT (SBERT)**—specifically the `all-MiniLM-L6-v2` transfor
 
 ---
 
-## 🛠️ Tech Stack
-* **Environment:** Managed via `uv` for 100x faster dependency resolution.
-* **Backend:** **FastAPI** (Asynchronous, high-performance web framework).
-* **Frontend:** **Streamlit** (Reactive dashboard for real-time similarity visualization).
-* **ML Engine:** `sentence-transformers` (PyTorch-based).
-* **Containerization:** Docker (Encapsulates the Python 3.12 runtime and SBERT dependencies to eliminate "it works on my machine" conflicts).
+
+
+
+## 🛠️ Technology Stack & System Architecture
+
+This project is built using a modern, containerized Python stack designed for high-performance Natural Language Processing (NLP) and scalable web delivery.
+
+### 🧠 AI & Machine Learning Engine
+* **Sentence-Transformers (SBERT):** Utilizes the `all-MiniLM-L6-v2` transformer model to convert unstructured text into **384-dimensional semantic vectors**.
+* **PyTorch (`torch`):** The underlying deep learning framework for managing tensor operations and model inference.
+* **Cosine Similarity:** The mathematical logic used to calculate the semantic proximity between Job Descriptions and Resumes.
+
+### ⚙️ Backend & API Layer
+* **FastAPI:** A modern, high-performance (asynchronous) web framework used to serve the ML model as a RESTful service.
+* **Uvicorn:** An ASGI server implementation for running the FastAPI application with high concurrency.
+* **Python-Multipart:** Enables the backend to handle complex form-data and binary file uploads.
+
+### 📄 Data Processing & Extraction
+* **pyPDF:** A robust library for extracting raw text from uploaded PDF resumes.
+* **Pandas & NumPy:** Used for efficient data manipulation, vector calculations, and structuring the final similarity results.
+
+### 🎨 Frontend & User Interface
+* **Streamlit:** A reactive web dashboard for real-time visualization of resume-to-JD similarity scores.
+* **Requests:** Facilitates communication between the Streamlit UI and the FastAPI backend.
+
+### 🏗️ Infrastructure & DevOps
+* **`uv` Package Manager:** Used for lightning-fast dependency resolution and ensuring a 100% reproducible environment via `uv.lock`.
+* **Docker:** Containerization platform used to package the entire stack into a portable image for consistent cross-platform execution.
 
 ---
+
 
 ## 📖 Research & Ethical Basis (IEEE Citations)
 * **[1] S. Datto et al. (2026):** Proves that NLP-driven analysis reduces inconsistent evaluation criteria in Industry 4.0 recruitment.

@@ -33,6 +33,7 @@ I chose **Sentence-BERT (SBERT)**—specifically the `all-MiniLM-L6-v2` transfor
 * **Backend:** **FastAPI** (Asynchronous, high-performance web framework).
 * **Frontend:** **Streamlit** (Reactive dashboard for real-time similarity visualization).
 * **ML Engine:** `sentence-transformers` (PyTorch-based).
+* **Containerization:** Docker (Encapsulates the Python 3.12 runtime and SBERT dependencies to eliminate "it works on my machine" conflicts).
 
 ---
 
